@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" href="https://i.postimg.cc/8zPZwZ6P/laugh-cry-emo-64x64.png" sizes="64x64" type="image/png"> 
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Survey</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Dank Survey</h1>
+  </header>
+
+  <section id="form-container">
+    <p id="description">Subscribe to PewDiePie!</p>
+    <div class="meme-image">
+      <img id="meme-intro-img" src="https://i.postimg.cc/76twmqpb/meme-compilation-image.jpg" alt="Meme Compilation Image">
+    </div>
+    <form class="pure-form pure-form-aligned" id="survey-form">
+      <fieldset>
+        <legend>Personalia</legend>
+        <div class="block-div">
+          <label for="name">
+            <p class="left-p"><span class="required-field">*</span> <span id="name-span">Name:</span></p>
+            <p class="right-p"><input type="text" name="Name" id="name" placeholder="Your Name" required></p>
+          </label>
+        </div>
+        
+        <div class="block-div">
+          <label for="email">
+            <p class="left-p"><span class="required-field">*</span> <span id="email-span">Email:</span></p> 
+            <p class="right-p"><input type="email" name="Email" id="email" placeholder="Your Email ID" required></p>
+          </label>
+        </div>
+        
+        <div>
+          <div class="block-div">
+            <label for="age">
+              <p class="left-p"><span class="required-field">*</span> <span id="age-span">Age:</span></p>
+              <p class="right-p"><input type="number" min="9" max="110" name="Age" id="age" placeholder="9 years old!" required></p>
+            </label>
+            <label for="subscribed">
+              <p id="nine-yo"><span>9 year old forever </span><input type="checkbox" name="9yoforever" id="subscribed" onclick="pewdSubFunc()"></p>
+            </label>
+          </div>
+          <p style="display:none" id="pewd-sub-text">Thank you for subscribing to PewDiePie!</p>
+        </div>
+      </fieldset>
+
+      <fieldset class="questions-container">
+        <legend>Help us get to know you better!</legend>
+
+        <div class="row">
+
+          <div class="left">
+            <p>Which option best describes you?</p>
+          </div>
+
+          <div class="right">
+            <select name="your-description" id="" required>
+                <option value="" disabled selected>Pick one</option>
+                <option value="s">I just enjoy memes</option>
+                <option value="">I'm somewhat of a memer myself</option>
+              </select>
+          </div>
+
+        </div>
+
+        <div class="traits">
+          
+          <div class="traits-question">
+            <p>What traits define your character? Tick all that apply.</p>
+          </div>
+
+          <div class="r1l1-container">
+
+            <div class="l1">
+              <label for="feminist">
+                <p><input id="feminist" type="checkbox"> Feminist</p>
+              </label>
+              <label for="racist">
+                <p><input id="racist" type="checkbox"> Racist</p>
+              </label>
+              <label for="libtard">
+                <p><input id="libtard" type="checkbox"> Libtard</p>
+              </label>
+              <label for="vegan">
+                <p><input id="vegan" type="checkbox"> Vegan</p>
+              </label>
+              <label for="antivaxxer">
+                <p><input id="antivaxxer" type="checkbox" onclick="locator();"> Surviving Antivaxxer</p>
+              </label>
+            </div>
+
+            <div class="r1">
+
+              <label for="communist">
+                <p><input id="communist" type="checkbox"> Communist</p>
+              </label>
+
+              <label for="normie">
+                <p><input id="normie" type="checkbox"> Normie</p>
+              </label>
+              <label for="weeb">
+                <p><input id="weeb" type="checkbox"> Weeb</p>
+              </label>
+              
+              <label for="madlad">
+                <p><input id="madlad" type="checkbox"> Absolute Madlad</p>
+              </label>
+              <label for="grammarnazi">
+                <p><input id="grammarnazi" type="checkbox"> GraMMaer N'azi</p>
+              </label>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+        <hr />
+
+        <div class="platform row">
+            <p>What are your preferred platforms for memes among these?</p>
+
+            <label for="Reddit">
+              <p><input id="Reddit" type="checkbox"> Reddit</p>
+            </label>
+            <label for="4chan">
+              <p><input id="4chan" type="checkbox"> 4chan</p>
+            </label>
+            <label for="9Gag">
+              <p><input id="9Gag" type="checkbox"> 9Gag</p>
+            </label>
+            <label for="Giphy">
+              <p><input id="Giphy" type="checkbox"> Giphy</p>
+            </label>    
+            <label for="checkbox-faceb00k">
+              <p><input id="checkbox-faceb00k" type="checkbox" onclick="disableLameOptions();"> faceb00k</p>
+            </label>
+            <label for="checkbox-instagerm">
+              <p><input id="checkbox-instagerm" type="checkbox" onclick="disableLameOptions();"> Instagerm</p>
+            </label>
+            <label for="GoogleImg">
+              <p><input id="GoogleImg" type="checkbox" onclick="showLegendaryStatus();"> Google Images <span style="display: none" id="legend">[Legend]</span></p>
+            </label>
+            <label for="Assistant">
+              <p><input id="Assistant" type="checkbox" onclick="showLegendaryStatus();"> Google Assistant <span style="display: none" id="ultra-legend">[Ultra Legend]</span></p>
+            </label>
+
+
+          </div>
+
+          <hr />
+
+        <div class="row preferred-platform">
+          <p>Which is your most preferred platform for memes among these?</p>
+
+          <div class="l1">
+
+            <label for="id-reddit">
+              <p><input type="radio" name="preferred-platform" id="id-reddit"> Reddit</p>
+            </label>
+            <label for="id-faceb00k">
+              <p><input type="radio" name="preferred-platform" id="id-faceb00k" disabled> faceb00k</p>
+            </label>
+          </div>
+
+          <div class="r1">
+
+            <label for="id-4chan">
+              <p><input type="radio" name="preferred-platform" id="id-4chan"> 4chan</p>
+            </label>
+            <label for="id-instagerm">
+              <p><input type="radio" name="preferred-platform" id="id-instagerm" disabled> Instagerm</p>
+            </label>
+          </div>
+
+        </div>
+
+      </fieldset>
+
+      <button onclick="closeTheTab();">click</button>
+
+    </form>
+  </section>
+
+<!-- The Modal -->
+<div id="thanos-modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="close">&times;</span>
+    <img id="thanos-img" src="https://i.postimg.cc/BZFXbhbr/Thanos-Snap.jpg" height="auto" width="180px" alt="Imagine Here Thanos is Wiping You Out of Existence!">
+    <!-- <hr /> -->
+    <p id="thanos-message">You do not deserve any memes!</p>
+  </div>
+
+</div>
+
+  <script>
+
+    let clickCounter = 0;
+
+    function closeTheTab() {
+
+    // make a modal later to make this confirm window attractive and more offensive 
+    const confirmVar = confirm("Get off the internet, n00b!");
+    confirmVar ? window.close() : false;
+
+    }
+
+    function pewdSubFunc() {
+
+      const pewdSubCheckbox = document.getElementById("subscribed");
+      const pewdSubText = document.getElementById("pewd-sub-text");
+
+      pewdSubCheckbox.checked ? pewdSubText.style.display = "block" : pewdSubText.style.display = "none";
+
+    }
+
+    function disableLameOptions() {
+
+      clickCounter += 1;
+
+      const faceb00k = document.getElementById("checkbox-faceb00k");
+      const instagerm = document.getElementById("checkbox-instagerm");
+
+      if (faceb00k.checked) {
+        faceb00k.checked = false;
+        faceb00k.setAttribute("disabled", "false");
+      }
+
+      if (instagerm.checked) {
+        instagerm.checked = false;
+        instagerm.setAttribute("disabled", "false");
+      }
+
+      if(clickCounter === 1) {
+        document.getElementById("thanos-message").textContent = "You do not deserve any memes!";  
+      }  
+      if(clickCounter === 2) {
+        const elem = document.getElementById("thanos-img");
+        elem.setAttribute("src", "https://media.giphy.com/media/goSX53ZlxRhKg/giphy.gif");
+        document.getElementById("thanos-message").textContent = "You erred twice, human! There will be no mercy!";
+      }
+
+      showModal();
+
+    }
+
+    function showLegendaryStatus() {
+      
+      const googleImages = document.getElementById("GoogleImg");
+      const googleAssistant = document.getElementById("Assistant");
+      const legend = document.getElementById("legend");
+      const ultraLegend = document.getElementById("ultra-legend");
+
+      googleImages.checked ? legend.style.display = "inline-block" : legend.style.display = "none";
+      googleAssistant.checked ? ultraLegend.style.display = "inline-block" : ultraLegend.style.display = "none";
+
+    }
+
+    let locatorClickCounter = 0;
+    const locator = function() {
+
+      if(document.getElementById("antivaxxer").checked) {
+
+        const img = document.getElementById('thanos-img');
+        const message = document.getElementById('thanos-message');
+
+        img.style.display = "none";
+        span.style.display = "none";
+        // message.textContent = "Illuminati wants to know your location!";
+        message.style.cssText = "border: none;";
+
+        if(locatorClickCounter === 0) {
+
+          locatorClickCounter++;
+          message.textContent = "Illuminati wants to know your location!";          
+          showModal();
+          setTimeout(() => {
+            message.textContent = "Illuminati now has your location information! Thank you!";
+          }, 2000);
+
+          setTimeout(() => {
+            modal.style.display = "none";
+            img.style.display = "block";
+            span.style.display = "block";
+          }, 4000);
+        
+        }
+
+        else if(locatorClickCounter > 0) {
+
+          message.textContent = "Illuminati already has your location information! Thank you!";
+          showModal();
+          setTimeout(() => {
+            modal.style.display = "none";
+            img.style.display = "block";
+            span.style.display = "block";
+          }, 2000);
+
+        }
+        
+      }
+
+    }
+
+    
+    
+    // MODAL 
+    
+    const modal = document.getElementById('thanos-modal');
+    const span = document.getElementById("close");
+    
+    function showModal() {
+      modal.style.display = "block";
+    }
+
+    const closeModal = function(e) {
+
+      if(e.target === span || e.target === modal) {
+        modal.style.display = "none";
+      }
+
+    }
+    
+    document.body.addEventListener("click", closeModal);
+
+  </script>
+</body>
+</html>
+
+<!-- https://en.meming.world/images/en/4/4a/Modern_Problems_Require_Modern_Solutions.jpg -->
