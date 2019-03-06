@@ -24,7 +24,7 @@ body {
 }
 
 // option:first {
- // color: black;
+// color: black;
 // }
 
 // #name-span, #email-span, #age-span {
@@ -49,7 +49,8 @@ body {
   text-align: left;
 }
 
-#nine-yo, #pewd-sub-text {
+#nine-yo,
+#pewd-sub-text {
   font-size: 0.75em;
   text-align: center;
   margin: 10px auto;
@@ -76,11 +77,12 @@ fieldset {
   color: red;
 }
 
-input[type=text], input[type=email] {
+input[type="text"],
+input[type="email"] {
   padding: 5px;
 }
 
-input[type=number] {
+input[type="number"] {
   width: 4rem;
   padding: 5px;
 }
@@ -96,7 +98,8 @@ select {
   box-shadow: 0 0 2px 1px rgba($color: #000000, $alpha: 0.5);
 }
 
-input[type=checkbox], input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-shadow: none;
   vertical-align: middle;
 }
@@ -121,13 +124,11 @@ input[type=checkbox], input[type=radio] {
 //   text-align: left;
 // }
 
-
 .r1l1-container {
   display: block;
   width: 100%;
   border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
 }
-
 
 .l1 {
   display: inline-block;
@@ -171,7 +172,7 @@ input[type=checkbox], input[type=radio] {
   margin: 0;
 }
 
-.preferred-platform label p input[type=radio] {
+.preferred-platform label p input[type="radio"] {
   vertical-align: middle !important;
 }
 
@@ -185,8 +186,8 @@ input[type=checkbox], input[type=radio] {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -230,19 +231,14 @@ input[type=checkbox], input[type=radio] {
   text-align: center;
 }
 
-
-
-
-
 @media (max-width: 500px) {
-
   .block-div label .left-p {
     display: block;
     margin: 10px auto;
     text-align: center;
     max-width: 100%;
   }
-  
+
   .block-div label .right-p {
     display: block;
     margin: 5px auto;
@@ -250,10 +246,22 @@ input[type=checkbox], input[type=radio] {
     max-width: 100%;
   }
 
-  #nine-yo, #pewd-sub-text {
+  #nine-yo,
+  #pewd-sub-text {
     font-size: 0.75em;
     text-align: center;
     margin: 10px auto;
   }
 
+  .modal-content {
+    width: 70%;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 800px) {
+  .modal-content {
+    width: 65%;
+    max-width: 70%;
+  }
 }
